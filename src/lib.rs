@@ -31,8 +31,8 @@
 /// assert_eq!(wagon_total(&miles, 1), 35);
 /// ```
 pub fn wagon_total(miles: &[[u32; 3]; 3], wagon: usize) -> u32 {
-    let mut total = miles[wagon][0];
-    for day in 0..2 {
+    let mut total = 0;
+    for day in 0..3 {
         total += miles[day][wagon];
     }
     return total;
